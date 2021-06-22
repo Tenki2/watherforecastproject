@@ -1,7 +1,9 @@
-function newtext() {
-  document.getElementById("test").innerHTML = "new html"
-}
 
 fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(response => response.json())
   .then(json => console.log(json))
+
+
+function newtext() {
+  document.getElementById("test").innerHTML = json()
+}
