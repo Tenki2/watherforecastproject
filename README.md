@@ -1,7 +1,7 @@
 # watherforecastproject
 
 ## Webiste:
-https://tenki2.github.io/watherforecastproject/
+- https://tenki2.github.io/weatherforecastproject/
 
 ## Useful Websites:
 
