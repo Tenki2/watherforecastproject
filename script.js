@@ -12,7 +12,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=Briston&appid=a93533fbc
 let t2 = t1;
 function newtext(t2) {
 
-    document.getElementById("test").innerHTML = "gone"
+    document.getElementById("test").innerHTML = "gone again"
 
 
 }
