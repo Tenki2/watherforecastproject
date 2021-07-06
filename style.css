@@ -1,8 +1,10 @@
 body {
-    background-color: lightblue;
+    background-color: rgb(201, 228, 197);
 }
 
 h1 {
-    color: navy;
+    color: rgb(34, 34, 33);
     margin-left: 20px;
+		text-align: center;
+		font-family: "Oxygen", sans-serif;
 }
