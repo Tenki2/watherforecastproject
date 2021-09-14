@@ -1,9 +1,9 @@
-# watherforecastproject
+# weatherforecastproject
 
 ## Webiste:
 - https://tenki2.github.io/weatherforecastproject/
 
-## Useful Websites:
+# Useful Websites:
 
 - https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
 
@@ -12,11 +12,11 @@
 - https://adam-marsden.co.uk/css-cheat-sheet
 
 
-# cloud help
+## cloud help
 - https://codepen.io/antonioescudero/pen/zrxGve
 
 - https://codepen.io/Mark_Bowley/pen/xEbuI
 
-# API Help
+## API Help
 
 - https://github.com/bpk68/g-sheets-api#readme
