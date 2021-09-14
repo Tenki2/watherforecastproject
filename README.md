@@ -16,3 +16,7 @@ cloud help
 - https://codepen.io/antonioescudero/pen/zrxGve
 
 - https://codepen.io/Mark_Bowley/pen/xEbuI
+
+## API Help
+
+- https://github.com/bpk68/g-sheets-api#readme
