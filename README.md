@@ -3,7 +3,7 @@
 ## Website:
 - https://tenki2.github.io/weatherforecastproject/
 
-# Notes
+## Notes
 
 require.js is needed because by default require() is not a valid function in client side javascript.
 
