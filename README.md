@@ -6,7 +6,7 @@
 ## Notes
 
 require.js is needed because by default require() is not a valid function in client side javascript.
-
+- https://requirejs.org/docs/errors.html#notloaded
 # Useful Websites:
 
 - https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
