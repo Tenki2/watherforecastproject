@@ -2,6 +2,7 @@
 
 ## Website:
 - https://tenki2.github.io/weatherforecastproject/
+
 **WEBSITE WONT DISPLAY THE DATA BECAUSE THE API ISNT CONNECTED**
 
 ## Notes
