@@ -1,5 +1,5 @@
 var t1;
-fetch('https://api.openweathermap.org/data/2.5/weather?q=Briston&appid=a93533fbcacec5513e231ee77af73e97')
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Briston&appid=' + config.wkey)
     .then(response => response.json())
     .then(response => {
         console.log(response)
@@ -16,68 +16,54 @@ function newtext(t2) {
 
 
 }
-fetch('https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdUYmP_c-0Jqu26vg3X8/values/A1:C100?key=AIzaSyBSX0JSlhgZc8CQSu-niOqscU05GQR7o1M')
+fetch("https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdUYmP_c-0Jqu26vg3X8/values/news!A1:C100?key=" + config.gkey)
   .then(response => response.json())
   .then(response => {
     console.log(response)
     console.log(response.values.at(-1)[0]) //first square brackets represent the index of what value to target, the second one targets what item in the array to use also .at lets me target the last value in the array
     t2 = response.values.at(-1)
     document.getElementById("test2").innerHTML = t2
+    document.getElementById("7api").innerHTML = response.values.at(-7)[0]// the 7 in this case means 7 days from now
+    document.getElementById("7api2").innerHTML = response.values.at(-7)[2]
 
+    document.getElementById("6api").innerHTML = response.values.at(-6)[0]
+    document.getElementById("6api2").innerHTML = response.values.at(-6)[2]
 
+    document.getElementById("5api").innerHTML = response.values.at(-5)[0]
+    document.getElementById("5api2").innerHTML = response.values.at(-5)[2]
 
+    document.getElementById("4api").innerHTML = response.values.at(-4)[0]
+    document.getElementById("4api2").innerHTML = response.values.at(-4)[2]
 
+    document.getElementById("3api").innerHTML = response.values.at(-3)[0]
+    document.getElementById("3api2").innerHTML = response.values.at(-3)[2]
 
+    document.getElementById("2api").innerHTML = response.values.at(-2)[0]
+    document.getElementById("2api2").innerHTML = response.values.at(-2)[2]
 
-
-    var avg_sales_array;
-    var count_y = 13;
-    var sales_array;
-    var salesnumber;
-    var daycount;
-    while (count_y <= response.values.count){
-
-    if (response.value[count_y][2] = response.value[count_y-1][2]){
-      sales_array.push(response.value[count_y-1][3]);
-    daycount = daycount+1;
-    }
-    else {forEach((sales_array) => { salesnumber=salesnumber+ item;
-    numberofday.push(daycount);
-
-    });
-    avg_sales_array.push(salesnumber/sales_array.items.count()); //pushes average sales per consecutive weatherdays
-
-
-    }
-
-    count_y=count_y+1;}
-    var x;
-    var inv_x = 30-x;
-    var dayremaining;
-    while (30>dayremaining){
-    console.log(avg_sales_array[inv_x]);
-    console.log(dayremaining)
-
-      dayremaining=dayremaining + numberofday[numberofday.items.count - x]
-    }
-
-
+    document.getElementById("1api").innerHTML = response.values.at(-1)[0]
+    document.getElementById("1api2").innerHTML = response.values.at(-1)[2]
   })
 
 
-
-
-/*
-var thirty = 1
-var counter = 0
-for thirty in range(1,30){
-  if response.values.at(thirty)[0] == "overcast clouds"{
-    overcast_counter = overcast_counter + 1
-  }
-  if response.values.at(thirty)[0] == "broken clouds"{
-    broken_counter = broken_counter + 1
-  }
-  if response.values.at(thirty)[0] == "overcast clouds"
-}
-
-*/
+fetch("https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdUYmP_c-0Jqu26vg3X8/values/news!A1:C100?key=" + config.gkey)
+  .then(response => response.json())
+  .then(response => {
+    console.log(response)
+    console.log(response.values.at(-1)[0])
+    //could go with the same var name but i want to use that data later =
+    let clear = [];//clear sky
+    let overcast = [];//overcast clouds
+    let scattered = [];//scattered clouds
+    let broken = [];//broken clouds
+    let light = []; //light rain
+    let moderate = [];//moderate rain
+    let few = [];//few clouds
+    for (let i = 0; i < 32; i++) {
+        if (response.values[i][2] === "clear sky"){
+        clear.push(response.values[i][2])
+        console.log("dog")
+      }
+    }
+    console.log(clear)
+})
