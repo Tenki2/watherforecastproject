@@ -53,13 +53,13 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdU
     console.log(response.values.at(-1)[0])
 
     //tried to implement using 2d arrays but it seems too hard if i dont know the size 
-    let c_s = [];
-    let o_s = [];
-    let s_s = [];
-    let b_s = [];
-    let l_s = [];
-    let m_s = [];
-    let f_s = [];
+    let c_s = []; //clear_sales
+    let o_s = []; //overcast_sales
+    let s_s = []; //scattered_sales
+    let b_s = []; //broken_sales
+    let l_s = []; //light_sales
+    let m_s = []; //moderate_sales
+    let f_s = []; //few_sales
 
     let clear = []; //clear sky
     let overcast = []; //overcast clouds
