@@ -16,7 +16,7 @@ function newtext(t2) {
 
 
 }
-fetch("https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdUYmP_c-0Jqu26vg3X8/values/news!A1:C100?key=" + config.gkey)
+fetch("https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdUYmP_c-0Jqu26vg3X8/values/news!A1:D100?key=" + config.gkey)
   .then(response => response.json())
   .then(response => {
     console.log(response)
@@ -46,24 +46,72 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdU
   })
 
 
-fetch("https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdUYmP_c-0Jqu26vg3X8/values/news!A1:C100?key=" + config.gkey)
+fetch("https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdUYmP_c-0Jqu26vg3X8/values/news!A1:D100?key=" + config.gkey)
   .then(response => response.json())
   .then(response => {
     console.log(response)
     console.log(response.values.at(-1)[0])
-    //could go with the same var name but i want to use that data later =
-    let clear = [];//clear sky
-    let overcast = [];//overcast clouds
-    let scattered = [];//scattered clouds
-    let broken = [];//broken clouds
+
+    //tried to implement using 2d arrays but it seems too hard if i dont know the size 
+    let c_s = [];
+    let o_s = [];
+    let s_s = [];
+    let b_s = [];
+    let l_s = [];
+    let m_s = [];
+    let f_s = [];
+
+    let clear = []; //clear sky
+    let overcast = []; //overcast clouds
+    let scattered = []; //scattered clouds
+    let broken = []; //broken clouds
     let light = []; //light rain
-    let moderate = [];//moderate rain
-    let few = [];//few clouds
-    for (let i = 0; i < 32; i++) {
-        if (response.values[i][2] === "clear sky"){
+    let moderate = []; //moderate rain
+    let few = []; //few clouds
+    for (let i = 0; i < 31; i++) {
+      if (response.values[i][2] === "clear sky") {
         clear.push(response.values[i][2])
-        console.log("dog")
+        c_s.push(response.values[i][3])
+
       }
+      if (response.values[i][2] === "overcast clouds") {
+        overcast.push(response.values[i][2])
+        o_s.push(response.values[i][3])
+
+      }
+      if (response.values[i][2] === "scattered clouds") {
+        scattered.push(response.values[i][2])
+        s_s.push(response.values[i][3])
+
+      }
+      if (response.values[i][2] === "broken clouds") {
+        broken.push(response.values[i][2])
+        b_s.push(response.values[i][3])
+
+      }
+      if (response.values[i][2] === "light rain") {
+        light.push(response.values[i][2])
+        l_s.push(response.values[i][3])
+      }
+      if (response.values[i][2] === "moderate rain") {
+        moderate.push(response.values[i][2])
+        m_s.push(response.values[i][3])
+
+      }
+      if (response.values[i][2] === "few clouds") {
+        few.push(response.values[i][2])
+        f_s.push(response.values[i][3])
+
+      }
+
     }
-    console.log(clear)
-})
+    console.log(clear.length)
+    console.log(overcast.length)
+    console.log(scattered.length)
+    console.log(broken.length)
+    console.log(light.length)
+    console.log(moderate.length)
+    console.log(few.length)
+
+  })
+
