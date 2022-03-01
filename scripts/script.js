@@ -49,10 +49,10 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdU
 fetch("https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdUYmP_c-0Jqu26vg3X8/values/news!A1:D100?key=" + config.gkey)
   .then(response => response.json())
   .then(response => {
-    console.log(response)
-    console.log(response.values.at(-1)[0])
+    console.log(response);
+    console.log(response.values.at(-1)[0]);
 
-    //tried to implement using 2d arrays but it seems too hard if i dont know the size 
+    //tried to implement using 2d arrays but it seems too hard if i dont know the size
     let c_s = []; //clear_sales
     let o_s = []; //overcast_sales
     let s_s = []; //scattered_sales
@@ -68,50 +68,53 @@ fetch("https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdU
     let light = []; //light rain
     let moderate = []; //moderate rain
     let few = []; //few clouds
-    for (let i = 0; i < 31; i++) {
-      if (response.values[i][2] === "clear sky") {
-        clear.push(response.values[i][2])
-        c_s.push(response.values[i][3])
-
+    for (let i = 0; i < 29; i++) {
+      if (response.values[i][2] === 'clear sky') {
+        clear.push(response.values[i][2]);
+        c_s.push(response.values[i][3]);
       }
-      if (response.values[i][2] === "overcast clouds") {
-        overcast.push(response.values[i][2])
-        o_s.push(response.values[i][3])
-
+      if (response.values[i][2] === 'overcast clouds') {
+        overcast.push(response.values[i][2]);
+        o_s.push(response.values[i][3]);
       }
-      if (response.values[i][2] === "scattered clouds") {
-        scattered.push(response.values[i][2])
-        s_s.push(response.values[i][3])
-
+      if (response.values[i][2] === 'scattered clouds') {
+        scattered.push(response.values[i][2]);
+        s_s.push(response.values[i][3]);
       }
-      if (response.values[i][2] === "broken clouds") {
-        broken.push(response.values[i][2])
-        b_s.push(response.values[i][3])
-
+      if (response.values[i][2] === 'broken clouds') {
+        broken.push(response.values[i][2]);
+        b_s.push(response.values[i][3]);
       }
-      if (response.values[i][2] === "light rain") {
-        light.push(response.values[i][2])
-        l_s.push(response.values[i][3])
+      if (response.values[i][2] === 'light rain') {
+        light.push(response.values[i][2]);
+        l_s.push(response.values[i][3]);
       }
-      if (response.values[i][2] === "moderate rain") {
-        moderate.push(response.values[i][2])
-        m_s.push(response.values[i][3])
-
+      if (response.values[i][2] === 'moderate rain') {
+        moderate.push(response.values[i][2]);
+        m_s.push(response.values[i][3]);
       }
-      if (response.values[i][2] === "few clouds") {
-        few.push(response.values[i][2])
-        f_s.push(response.values[i][3])
-
+      if (response.values[i][2] === 'few clouds') {
+        few.push(response.values[i][2]);
+        f_s.push(response.values[i][3]);
       }
-
     }
-    console.log(clear.length)
-    console.log(overcast.length)
-    console.log(scattered.length)
-    console.log(broken.length)
-    console.log(light.length)
-    console.log(moderate.length)
-    console.log(few.length)
+    console.log(clear.length);
+    console.log(overcast.length);
+    console.log(scattered.length);
+    console.log(broken.length);
+    console.log(light.length);
+    console.log(moderate.length);
+    console.log(few.length);
+    console.log(c_s)
 
-  })
-
+    function adding(array) { // this funciton adds all of the items in the array togther
+      let sum = 0;
+      for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+      }
+      return sum;
+    }
+    console.log(adding(c_s.map(Number))); // .map(number) converts the contents of the array into integers
+    var clear_mean = adding(c_s.map(Number)) / c_s.length;
+    console.log(clear_mean)
+  });
