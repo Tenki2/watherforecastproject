@@ -1,8 +1,5 @@
 var t1;
-fetch(
-  "https://api.openweathermap.org/data/2.5/weather?q=Briston&appid=" +
-    config.wkey
-)
+fetch("https://api.openweathermap.org/data/2.5/weather?q=Briston&appid=" + config.wkey)
   .then((response) => response.json())
   .then((response) => {
     console.log(response);
@@ -17,10 +14,7 @@ var t2 = t1;
 function newtext() {
   document.getElementById("test").innerHTML = "Gone";
 }
-fetch(
-  "https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdUYmP_c-0Jqu26vg3X8/values/news!A1:D100?key=" +
-    config.gkey
-)
+fetch("https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdUYmP_c-0Jqu26vg3X8/values/news!A1:D100?key=" + config.gkey)
   .then((response) => response.json())
   .then((response) => {
     console.log(response);
@@ -51,9 +45,7 @@ fetch(
   });
 
 fetch(
-  "https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdUYmP_c-0Jqu26vg3X8/values/news!A1:D100?key=" +
-    config.gkey
-)
+  "https://sheets.googleapis.com/v4/spreadsheets/1yyFnVu1kupXokENcQXFUh3ohdUYmP_c-0Jqu26vg3X8/values/news!A1:D100?key=" + config.gkey)
   .then((response) => response.json())
   .then((response) => {
     console.log(response);
@@ -132,9 +124,7 @@ fetch(
     var few_mean = adding(f_s.map(Number)) / f_s.length;
     console.log(over_mean);
     fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=Briston&appid=" +
-        config.wkey
-    )
+      "https://api.openweathermap.org/data/2.5/weather?q=Briston&appid=" + config.wkey)
       .then((response2) => response2.json())
       .then((response2) => {
         console.log(response2.weather[0].description);
