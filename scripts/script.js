@@ -6,8 +6,7 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q=Briston&appid=" + confi
     console.log(response.weather[0].description);
     t1 = response.weather[0].description;
     console.log(t1);
-    document.getElementById("test").innerHTML =
-      "The weather at The Treehouse Cafe is " + t1;
+    document.getElementById("test").innerHTML = "The weather at The Treehouse Cafe is " + t1;
     return t1;
   });
 var t2 = t1;
@@ -129,32 +128,25 @@ fetch(
       .then((response2) => {
         console.log(response2.weather[0].description);
         if (response2.weather[0].description === "clear sky") {
-          document.getElementById("avg").innerHTML =
-            "On average The Treehouse will have " + clear_mean + " sales";
+          document.getElementById("avg").innerHTML = "On average The Treehouse will have " + clear_mean + " sales";
         }
         if (response2.weather[0].description === "overcast clouds") {
-          document.getElementById("avg").innerHTML =
-            "On average The Treehouse will have " + over_mean + " sales";
+          document.getElementById("avg").innerHTML = "On average The Treehouse will have " + over_mean + " sales";
         }
         if (response2.weather[0].description === "scattered clouds") {
-          document.getElementById("avg").innerHTML =
-            "On average The Treehouse will have " + scattered_mean + " sales";
+          document.getElementById("avg").innerHTML = "On average The Treehouse will have " + scattered_mean + " sales";
         }
         if (response2.weather[0].description === "broken clouds") {
-          document.getElementById("avg").innerHTML =
-            "On average The Treehouse will have " + broken_mean + " sales";
+          document.getElementById("avg").innerHTML = "On average The Treehouse will have " + broken_mean + " sales";
         }
         if (response2.weather[0].description === "light rain") {
-          document.getElementById("avg").innerHTML =
-            "On average The Treehouse will have " + light_mean + " sales";
+          document.getElementById("avg").innerHTML = "On average The Treehouse will have " + light_mean + " sales";
         }
         if (response2.weather[0].description === "moderate rain") {
-          document.getElementById("avg").innerHTML =
-            "On average The Treehouse will have " + moderate_mean + " sales";
+          document.getElementById("avg").innerHTML = "On average The Treehouse will have " + moderate_mean + " sales";
         }
         if (response2.weather[0].description === "few clouds") {
-          document.getElementById("avg").innerHTML =
-            "On average The Treehouse will have " + few_mean + " sales";
+          document.getElementById("avg").innerHTML = "On average The Treehouse will have " + few_mean + " sales";
         }
         //console.log(response.weather[0].description)
       });
