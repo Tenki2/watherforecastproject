@@ -1,5 +1,6 @@
 table,
 th,
+
 td {
   border: 1px solid black;
   border-collapse: collapse;
@@ -48,6 +49,19 @@ button {
 
   display: flex;
   align-items: center;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    font-family: "Oxygen", sans-serif;
 }
 .container {
   margin: 0;
