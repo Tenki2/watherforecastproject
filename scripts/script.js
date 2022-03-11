@@ -1,5 +1,5 @@
 var t1;
-fetch("https://api.openweathermap.org/data/2.5/weather?q=Briston&appid=" + config.wkey)
+fetch("https://api.openweathermap.org/data/2.5/weather?q=Briston&appid=" + wkey)
   .then((response) => response.json())
   .then((response) => {
     console.log(response);
