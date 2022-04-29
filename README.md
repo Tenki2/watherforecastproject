@@ -12,9 +12,7 @@
 # Useful Websites:
 
 - https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
-
 - https://websitesetup.org/wp-content/uploads/2019/11/wsu-css-cheat-sheet-gdocs.pdf
-
 - https://adam-marsden.co.uk/css-cheat-sheet
 - https://github.com/contributorpw/google-apps-script-snippets/blob/master/snippets/sheets/filters_samples/index.js
 - https://support.google.com/docs/thread/41053434/filter-on-two-columns-in-scripts?hl=en
@@ -26,8 +24,8 @@
 
 ## cloud help
 - https://codepen.io/antonioescudero/pen/zrxGve
-
 - https://codepen.io/Mark_Bowley/pen/xEbuI
+- https://codepen.io/arickle/pen/XKjMZY 
 
 ## API Help
 
